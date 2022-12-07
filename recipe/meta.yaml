@@ -1,20 +1,20 @@
-{% set version = "0.8.14" %}
+{% set version = "0.8.15" %}
 
 package:
-  name: ncagg 
+  name: ncagg
   version: {{ version }}
 
 source:
   url: https://github.com/5tefan/ncagg/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: a8e67656ca2cba850cb8713838af351ccab6d50994318b359800188779e5eafc
+  sha256: 8d77b176b686cd81d6e67850e8c6995d40e8453f7cdf9a8954e2b7b1d789f190
 
 build:
   noarch: python
   entry_points:
-    - "ncagg = ncagg.cli:cli"
+    - ncagg = ncagg.cli:cli
   number: 0
-  script: 
-    - "{{ PYTHON }} -m pip install . -vv"
+  script:
+    - {{ PYTHON }} -m pip install . -vv
     - python -m unittest discover -s $SRC_DIR
 
 requirements:
@@ -45,11 +45,11 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Combine multiple netCDF files into one.'
+  summary: Combine multiple netCDF files into one.
   description: |
     ncagg is a flexible aggregation software that combines multiple netcdf
     files into a single file, with special handling for metadata.
-  doc_url: https://ncagg.readthedocs.io/en/latest/ 
+  doc_url: https://ncagg.readthedocs.io/en/latest/
   dev_url: https://github.com/5tefan/ncagg
 
 extra:
