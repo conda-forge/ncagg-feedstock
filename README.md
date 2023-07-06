@@ -1,11 +1,11 @@
-About ncagg
-===========
+About ncagg-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ncagg-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/5tefan/ncagg
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ncagg-feedstock/blob/main/LICENSE.txt)
 
 Summary: Combine multiple netCDF files into one.
 
