@@ -1,4 +1,4 @@
-{% set version = "0.8.17" %}
+{% set version = "0.8.18" %}
 
 package:
   name: ncagg
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/5tefan/ncagg/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: a025179e0af55f040eef93181b11312d528c68d7076aaafc662d12640c19b49f
+  sha256: c74bdb7cc268ec9f5338495bfc469c843ae2559e1a88c135165afd3e61eb2cb7
 
 build:
   noarch: python
