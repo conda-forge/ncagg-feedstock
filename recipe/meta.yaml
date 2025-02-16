@@ -12,21 +12,21 @@ build:
   noarch: python
   entry_points:
     - ncagg = ncagg.cli:cli
-  number: 0
+  number: 1
   script:
     - {{ PYTHON }} -m pip install . -vv
     - python -m unittest discover -s $SRC_DIR
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - numpy
     - netcdf4
     - cerberus
     - click
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - numpy
     - netcdf4
     - cerberus
@@ -37,6 +37,7 @@ test:
     - ncagg
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
