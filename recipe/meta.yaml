@@ -1,4 +1,4 @@
-{% set version = "0.8.18" %}
+{% set version = "0.8.19" %}
 
 package:
   name: ncagg
@@ -6,13 +6,13 @@ package:
 
 source:
   url: https://github.com/5tefan/ncagg/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: c74bdb7cc268ec9f5338495bfc469c843ae2559e1a88c135165afd3e61eb2cb7
+  sha256: b69a3df33bcc853f45ec6cdd39335a109e6188e0156b0798220eaf844d229ac1
 
 build:
   noarch: python
   entry_points:
     - ncagg = ncagg.cli:cli
-  number: 1
+  number: 0
   script:
     - {{ PYTHON }} -m pip install . -vv
     - python -m unittest discover -s $SRC_DIR
